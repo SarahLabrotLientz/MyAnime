@@ -9,6 +9,13 @@ fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/")
         }
     })
 
+
+
+    fetch('https://animechan.vercel.app/api/random')
+    .then(response => response.json())
+    .then(quote => console.log(quote))
+
+
 // var obj = {
 //     dogN: "Fido",
 //     test: {
