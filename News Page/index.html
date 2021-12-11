@@ -29,13 +29,13 @@
                 <a class="navbar-item" href="https://bulma.io/">
                     Home
                 </a>
-                <a class="navbar-item" href="https://bulma.io/">
+                <a class="navbar-item" href="../Trivia Page/index.html">
                     Trivia
                 </a>
-                <a class="navbar-item" href="https://bulma.io/">
+                <a class="navbar-item" href="../News Page/index.html">
                     News
                 </a>
-                <a class="navbar-item" href="https://bulma.io/">
+                <a class="navbar-item" href="../Discovery page/index.html">
                     Discover
                 </a>
               
@@ -53,54 +53,61 @@
         </figure>
     </section>
 
-    <section class="container">
+    <section style = "padding: 1rem" class="container has-background-danger is-fluid">
         <h1 class="title">Big Anime News!</h1>
-        <h2 class="subtitle">
-          A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+        <h2 style = "padding: 1rem" class="subtitle">
+          Check out the latest upcoming season's anime! or check out previous season's releases.
         </h2>
       </section>
 
-    <div class="field">
-        <p class="control is-left">
-          <label>Year</label>
-          <span class="select">
-            <select>
-              <option selected>2022</option>
-              <option>2021</option>
-              <option>2020</option>
-              <option>2019</option>
-              <option>2018</option>
-              <option>2017</option>
-              <option>2016</option>
-            </select>
-            </span>
-        </p>
-      </div>
+      <aside style = "padding: 1rem" class = "container is-fluid">
+        <form id = "searchForm">
+        <div class="field">
+            <p class="control is-left">
+              <label>Year</label>
+              <span class="select">
+                <select id = "years">
+                  <option selected>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                </select>
+                </span>
+            </p>
+         </div>
 
-      <div class="field">
-        <p class="control is-left">
-          <label>Season</label>
-          <span class="select">
-            <select>
-              <option selected>Winter</option>
-              <option>Spring</option>
-              <option>Summer</option>
-              <option>Fall</option>
-            </select>
-          </span>
-          
-        </p>
-      </div>
+          <div class="field">
+           <p class="control is-left">
+             <label>Season</label>
+             <span class="select">
+               <select id = "seasons">
+                 <option selected>winter</option>
+                 <option>spring</option>
+                  <option>summer</option>
+                 <option>fall</option>
+                </select>
+             </span>
+            </p>
+          </div>
 
-    <div>
-        <h1>Current Season's Anime</h1>
+          <button class = "button is-danger">Search</button>
+        </form>
+      </aside>
+
+    <div class = "columns is-centered" id = "seasonal">
+        <ul id = "seasonalList">
+          <div></div>
+        </ul>
+
     </div>
-
-    <div id = "seasonal">
-        <ol id = "seasonalList"></ol>
-
-    </div>
-
 
     <script src="script.js"></script>
 </body>
