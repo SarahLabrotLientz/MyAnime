@@ -1,82 +1,101 @@
-// Script edits Thur Dec 9
 
-$(document).ready(function() {
-    console.log("ready!");
+// // //Get select object from dropdown menu
+
+var selectElement = document.querySelector(".Selected");
+
+selectElement.addEventListener('change', (event) => {
+
+    var result = document.querySelector(".result");
+    result.textContent = event.target.value;
+    var chosen = event.target.value;
+    loadSelectedAnime(chosen);
+    var allchosen = []; //array to hold all selected anime characters
+
+    allchosen = JSON.parse(localStorage.getItem("allchosen")) || []; //get previously chosen
+    allchosen.push(chosen); //pushes new choices selected in array
+    localStorage.setItem("allchosen", JSON.stringify(allchosen)); //saves chosen anime to local storage
+
+    
+});
 
 
-
-
-// //Get select object
-
-// //Get select object
-// var AnimeSelected = document.getElementById("Selected");
-
-// //Set selected
-// showAnime(AnimeSelected, "13");
-
-// function showAnime(selected, valueToSet) {
-//     for (var i = 0; i < AnimeSelected.options.length; i++) {
-//         if (AnimeSelected.options[i].text== valueToSet) {
-//             AnimeSelected.options[i].selected = true;
-//             return;
-//         }
-//     }
-// }
+//Saturday Work 
 
 
 
+  //to open API for images and facts
 
-// onclick when user selects anime character
-$("#Selected").on("click", function(event) {
-    event.preventDefault();
-    EventTarget.addEventListener()
-    var AnimeSelected = $("#Selected").val() //save the anime character selected
-    var allAnime= []; //Array to hold all selected anime characters
+function loadSelectedAnime(name) {
+    var animeURL = "https://anime-facts-rest-api.herokuapp.com/api/v1/" + name;
+    fetch(animeURL)
+        .then(response => response.json())
+        .then(info => {
+            console.log(info)
+            var newimage = document.createElement("img");
+            newimage.setAttribute("src", info.img);
 
-    allAnime= JSON.parse(localStorage.getItem("allAnime")) || []; //Get Anime Characters
-    allAnime.push(AnimeSelected); //pushes new anime selected to array
-    localStorage.setItem("allAnime", JSON.stringify(allAnime)); //save anime selected to local storage
+            document.querySelector("body").appendChild(newimage);
 
+            for (var i=0; i<info.data.length; i++){
+                var newCard = document.createElement("h2");
+                newCard.textContent = info.data[i].fact;
+                document.querySelector("body").appendChild(newCard);
+                console.log(info.data[i].fact);
+            }
 
-    showAnime(AnimeSelected);
-}); //End of anime selection onclick storage
-
-
-
-
-
+            //Trying to style results
+                // $(".results").append(
+                //     "<div class='columns is-centered'>"
+                //     +  "<div class='column'>"
+                //     +  "<div class='card-image'>" + newimage +"</div>"
+                //     +  "<div class='card-text'>" + "<img src='" + newimage+ "'>" +"</div>"
+                     
+                //     + "</div>" 
+                // )
+        })
+}
 
 
 
 
 
 // DAY 1 JAVASCRIPT TO SEE IF API WORKED
-fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/")
-    .then(response => response.json())
-    .then(info => { 
-        console.log(info)
-        for (i=0; i<info.data.length; i++){
-            var newH = document.createElement("h2");
-            newH.textContent = info.data[i].anime_name;
-            document.querySelector("body").appendChild(newH)
-        }
-    })
-
-
-
-    fetch('https://animechan.vercel.app/api/random')
-    .then(response => response.json())
-    .then(quote => console.log(quote))
-
-
-// var obj = {
-//     dogN: "Fido",
-//     test: {
-//         name: "Lewis",
-//         moreTest: {
-//             superName: "Batman"
+// fetch("https://anime-facts-rest-api.herokuapp.com/api/v1/")
+//     .then(response => response.json())
+//     .then(info => { 
+//         console.log(info)
+//         for (i=0; i<info.data.length; i++){
+//             var newCard = document.createElement("card");
+//             newCard.textContent = info.data[i].anime_name;
+//             document.querySelector("body").appendChild(newCard);
 //         }
-//     }
+//     })
+
+// function createList(anime) {
+//     var newTitle = document.createElement("li");
+//     newTitle.textContent = anime_name;
+
+//     console.log(anime);
+
+//     var newImg = document.createElement("img");
+//     newImg.setAttribute("src", anime_img);
+//     selectElement.appendChild(newTitle);
+//     selectElement.appendChild(newImg);
 // }
 
-// console.log(obj.test.moreTest.superName)
+//     fetch('https://animechan.vercel.app/api/random')
+//     .then(response => response.json())
+//     .then(quote => console.log(quote))
+
+
+// // var obj = {
+// //     dogN: "Fido",
+// //     test: {
+// //         name: "Lewis",
+// //         moreTest: {
+// //             superName: "Batman";
+// //         }
+// //     }
+// // }
+
+// // console.log(obj.test.moreTest.superName)
