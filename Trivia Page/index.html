@@ -1,12 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRIVIA</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </head>
+
 <body>
-    <script src="assets/script.js"></script>
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+     
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                    Home
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    Trivia
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    News
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    Discover
+                </a>
+              
+                  
+                        </a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <figure class="image">
+            <img src="ScreenShot.png">
+        </figure>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h2 class="title">Trivia Finder</h2>
+            <p>Pick an anime character to find trivia and character descriptions. 
+            </p>
+            <!-- just added a drop down menu for api -->
+            <div style="padding: 1rem"></div>
+            <div class="field">
+                <p class="control has-icons-left">
+                  <span class="select" >
+                    <select class="Selected">
+                      <option selected="">Character Name</option>
+                      <option value="bleach">Bleach</option>
+                      <option value="black_clover">Black Clover</option>
+                      <option value="dragon_ball">Dragon Ball</option>
+                      <option value="jujutsu_kaisen">Jujutsu Kaisen</option>
+                      <option value="fma_brotherhood">FMA Brotherhood</option>
+                      <option value="naruto">Naruto</option>
+                      <option value="gintama">Gintama</option>
+                      <option value="itachi_uchiha">Itachi Uchiha</option>
+                      <option value="one_piece">One Piece</option>
+                      <option value="demon_slayer">Demon Slayer</option>
+                      <option value="attack_on_titan">Attack on Titan</option>
+                      <option value="hunter_x_hunter">Hunter X Hunter</option>
+                      <option value="boku_no_hero_academia">Boku No Hero Academia</option>
+                    </select>
+                  </span>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                </p>
+              </div>
+              <div class = "result"></div>
+
+
+              <!-- dropdown menu ends and start of placeholder 3 cards -->
+            <div class="columns is-centered" style="padding: 2rem">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="ScreenShot.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Trivia</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Visit our Trivia page for exclusive character facts and fun quotes that will help you relive all of your favorites. 
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="ScreenShot.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">News</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Check out all the latest in anime content from new releases to old classics -if it's trending, we got it. 
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="ScreenShot.png">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Discover</p>
+                                  
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Looking for your next favorite? Need a little somethin somethin to get you through the day? Look no further. 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+  
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a href="">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-snapchat fa-2x"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+        <!-- <script src="../js/bulma.js"></script> -->
+        <script src="assets/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
+
 </html>

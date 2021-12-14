@@ -5,19 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime News!</title>
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+    <link rel="stylesheet" href="./news_style.css" />
+
 </head>
 <body>
-    <header>Big Anime News</header>
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+     
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
-    <div>
-        <h1>Current Season's Anime</h1>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                    Home
+                </a>
+                <a class="navbar-item" href="../Trivia Page/index.html">
+                    Trivia
+                </a>
+                <a class="navbar-item" href="../News Page/index.html">
+                    News
+                </a>
+                <a class="navbar-item" href="../Discovery page/index.html">
+                    Discover
+                </a>
+              
+                  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <figure class="image banner">
+            <img src="./images/img1.jpg">
+        </figure>
+    </section>
+
+    <section style = "padding: 1rem" class="container has-background-danger is-fluid">
+        <h1 class="title">Big Anime News!</h1>
+        <h2 style = "padding: 1rem" class="subtitle">
+          Check out the latest upcoming season's anime! or check out previous season's releases.
+        </h2>
+      </section>
+
+      <aside style = "padding: 1rem" class = "container is-fluid">
+        <form id = "searchForm">
+        <div class="field">
+            <p class="control is-left">
+              <label>Year</label>
+              <span class="select">
+                <select id = "years">
+                  <option selected>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                  <option>2019</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                </select>
+                </span>
+            </p>
+         </div>
+
+          <div class="field">
+           <p class="control is-left">
+             <label>Season</label>
+             <span class="select">
+               <select id = "seasons">
+                 <option selected>winter</option>
+                 <option>spring</option>
+                  <option>summer</option>
+                 <option>fall</option>
+                </select>
+             </span>
+            </p>
+          </div>
+
+          <button class = "button is-danger">Search</button>
+        </form>
+      </aside>
+
+    <div class = "columns is-centered" id = "seasonal">
+        <ul id = "seasonalList">
+          <div></div>
+        </ul>
+
     </div>
-
-    <div id = "seasonal">
-        <ol id = "seasonalList"></ol>
-
-    </div>
-
 
     <script src="script.js"></script>
 </body>
