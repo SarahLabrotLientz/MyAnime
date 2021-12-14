@@ -17,18 +17,22 @@
 
 }
 
-.jude-row .card > .card-content {
-    flex-grow: 1;
-}
+
 
 .jude-row .card > .card-image {
     flex-basis: 25rem;
     flex-shrink: 0;
     overflow-y: hidden;
-    background-color: grey;
+    background-color: rgb(170, 20, 20);
+    
+    ;
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
+}
+
+.card-content {
+    text-shadow: red;
 }
