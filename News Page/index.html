@@ -12,21 +12,12 @@
 
 </head>
 <body>
-    <nav class="navbar is-dark">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-     
-            </a>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
 
+  <!-- Nav bar to guide through our pages-->
+    <nav class="navbar is-dark">
         <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="https://bulma.io/">
+                <a class="navbar-item" href="../index.html">
                     Home
                 </a>
                 <a class="navbar-item" href="../Trivia Page/index.html">
@@ -47,19 +38,22 @@
         </div>
     </nav>
 
+  <!--Section for banner image-->
     <section class="hero">
         <figure class="image banner">
-            <img src="./images/img1.jpg">
+            <img src="./images/img1.jpg" alt = "anime girl reading news paper image">
         </figure>
     </section>
 
     <section style = "padding: 1rem" class="container has-background-danger is-fluid">
         <h1 class="title">Big Anime News!</h1>
         <h2 style = "padding: 1rem" class="subtitle">
-          Check out the latest upcoming season's anime! or check out previous season's releases.
+          <strong>Check out the latest upcoming season's anime! or check out previous season's releases.</strong>
         </h2>
       </section>
 
+
+  <!-- Search bar labels and selectors for year/seasons -->
       <aside style = "padding: 1rem" class = "container is-fluid">
         <form id = "searchForm">
         <div class="field">
@@ -102,13 +96,13 @@
         </form>
       </aside>
 
-    <div class = "columns is-centered" id = "seasonal">
-        <ul id = "seasonalList">
-          <div></div>
-        </ul>
 
+<!-- List of animes populated inside this div -->
+    <div class = "columns is-multiline is-centered" id = "seasonalList">
+    
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
