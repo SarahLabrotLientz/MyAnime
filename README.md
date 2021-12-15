@@ -26,9 +26,9 @@ You can view an interactive prototype of the design idea for the site here: ****
  demo
 
 Credits
-mkang987(Alex Kang): Discovery Page and parts of the Trivia Page Javascript
+mkang987(Alex Kang): News Page and parts of the Trivia Page Javascript
 
-JudeCollins(Jude Collins): News Page (very comprehensive)
+JudeCollins(Jude Collins): Discovery Page (very comprehensive)
 
 SarahLabrotLientz(Sarah Labrot): Home Page and Trivia Page
 
