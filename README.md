@@ -1,6 +1,6 @@
 # MyAnime
 
-Anime is a form of animation that started in Japan and has developed a world-wide following. In the US alone, roughly 12 million people are avid anime fans. In the world, this number is exponentially more, with a global fan base of 2-3 billion people. Our site MyAnime takes these 
+Anime is a form of animation that started in Japan and has developed a world-wide following. In the US alone, roughly 12 million people are avid anime fans. In the world, this number is exponentially more with a global fan base of 2-3 billion people. Our site MyAnime takes these 
 numbers into account and strives to give the viewship an easy way to interact with their favorite form of entertainment. We do this with trivia, discovery and news ---all in one easy to use interface. When anime fans visit MyAnime.com they do more than find new material, they belong. 
 
 
