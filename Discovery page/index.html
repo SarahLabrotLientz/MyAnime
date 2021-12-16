@@ -29,7 +29,7 @@
 
         <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="../HomePage/index.html">
+                <a class="navbar-item" href="../index.html">
                     Home
                 </a>
                 <a class="navbar-item" href="../Trivia Page/index.html">
@@ -44,31 +44,28 @@
         </nav>
         <div class="container">
 
-            <h1 class="text-center" style="padding: 2rem;"></h1>
+            <h1 class="text-center" style="padding: 2rem;">Discover your new favorite anime!</h1>
           
             <nav class="navbar navbar-light bg-light justify-content-center">
           
-                <form id="search_form" class="col s12">
+              <form class="form-inline" id="form2">
           
-                <input placeholder="" name="search" id="search" type="text" class="validate">
+                <input class="form-control mr-sm-2" id="search" type="text" placeholder="" aria-label="Search">
           
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="enter"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="enter" id="enter"><i class="fas fa-search"></i></button>
               </form>
           
             </nav>
-              
-                <button type="button" id="delete"class="btn btn-outline-danger"style="display:1rem auto;">Delete Searches</button>
-           
+            <button type="button" id="delete" class="btn btn-outline-danger" style="display: block 1rem auto;">Delete Searches</button>
           
-            <h2 style="font-size: 20px; padding: 1rem;"> Your Anime List!</h2>
+            <h2 style="font-size: 20px; padding: 1rem;">Recent Searches</h2>
           
             <ul class="list-group list-group-flush" id="ul">
           
             </ul>
           
-         
-          
-        
+          </div>
+     
         </div>
         
         <div id="search-results" class="container">
@@ -76,6 +73,7 @@
         </div>
         
         <script src="script.js"></script>
-       <script src ="local.js"></script>
+        
+       
 </body>
 </html>
