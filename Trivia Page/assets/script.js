@@ -39,7 +39,7 @@ $(".result").empty();
             var newimage = document.createElement("img");
             newimage.setAttribute("src", info.img);
 
-//creating attribute "class" to style the above
+//future developement: creating attribute "class" to style the above
             // newimage.setAttribute("class")
             document.querySelector(".result").appendChild(newimage);
 
